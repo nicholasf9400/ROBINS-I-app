@@ -9,22 +9,15 @@
 
 library(shiny)
 
+ 
+
 # Define UI for application that draws a histogram
 navbarPage('Test app',
            
            tabPanel('Domæne 1',
                     id = 'dom1',
                     'test1',
-                    
-                    fluidPage(
-                      
-                      fluidRow(
-                        column()
-                      )
-                    )
-                    
-                    
-                    ),
+            ),
            tabPanel('Domæne 2',
                     id = 'dom2',
                     'test1'
