@@ -8,40 +8,24 @@
 #
 
 library(shiny)
+library(bslib)
 
  
 
-# Define UI for application that draws a histogram
-navbarPage('Test app',
-           
-           tabPanel('Domæne 1',
-                    id = 'dom1',
-                    'test1',
-            ),
-           tabPanel('Domæne 2',
-                    id = 'dom2',
-                    'test1'
-           ),
-           tabPanel('Domæne 3',
-                    id = 'dom3',
-                    'test1'
-           ),
-           tabPanel('Domæne 4',
-                    id = 'dom4',
-                    'test1'
-           ),
-           tabPanel('Domæne 5',
-                    id = 'dom5',
-                    'test1'
-           ),
-           tabPanel('Domæne 6',
-                    id = 'dom6',
-                    'test1'
-           ),
-           tabPanel('Domæne 7',
-                    id = 'dom7',
-                    'test1'
-           )
-           
-           
+layout_columns(
+  card('Spørgsmål 1.1: Er der mulighed for at effekten er konfoundet?'), 
+  
+  card('Svar:',
+       selectInput('1_1', 
+                   '',
+                   list('Y' = 'y', 
+                        'PY' = 'py',
+                        'N' = 'n',
+                        'PN' = 'pn')
+                   )
+       ),
+  card('Forklaring', 
+       textAreaInput('txt_11',
+                     label = 'Forklaring',)
+       )
 )
